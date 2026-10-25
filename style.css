@@ -1017,3 +1017,63 @@ body {
     font-size: 12px;
     color: #777;
 }
+/* Responsive / Mobil Uyğunlaşdırma Qaydaları */
+
+@media (max-width: 992px) {
+    /* 992 pikseldən kiçik ekranlarda (Planşetlər) */
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Header elementlərini alt-alta salmaq üçün */
+    .header-flex {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .main-navigation ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* Blog və digər 2-li grid bölmələri */
+    .blog-details-section .container,
+    .login-register-section .container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 768 pikseldən kiçik ekranlarda (Mobil telefonlar) */
+    
+    /* Top bar və menyular */
+    .market-right {
+        display: none; /* Envato düyməsini telefonda gizlətmək üçün */
+    }
+
+    .bottom-flex {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-form-group {
+        width: 100%;
+    }
+
+    /* Məhsul şəbəkələri və kartlar bir sütun olsun */
+    .products-grid, 
+    .children-grid-4, 
+    .deal-grid-6, 
+    .seller-grid-2x2,
+    .blogs-grid-2 {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Footer sütunları telefonda tək sütun olsun */
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px;
+    }
+}
